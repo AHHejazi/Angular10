@@ -1,0 +1,69 @@
+<div class="wrapper_inner">
+  <h2 class="head_v1"><span class="icon_nav icon-debt"></span>إرسال الطلب</h2>
+  <form #requestForm="ngForm" (ngSubmit)="onSubmit()">
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="firstName">أسم الجهة</label>
+        <select
+          class="form-control"
+          id="ministry"
+          required
+          [(ngModel)]="MinistryId"
+          name="ministry"
+          #ministry="ngModel"
+        >
+          <option
+            *ngFor="let ministry of ddMinistries"
+            [value]="ministry.value"
+            >{{ ministry.text }}</option
+          >
+        </select>
+        <div
+          [hidden]="ministry.valid || ministry.pristine"
+          class="alert alert-danger"
+        >
+          ministry is required
+        </div>
+      </div>
+    </div>
+
+    <button [disabled]="loading" class="btn btn-primary">
+      <span
+        *ngIf="loading"
+        class="spinner-border spinner-border-sm mr-1"
+      ></span>
+      بحث
+    </button>
+    <a routerLink="/users" class="btn btn-link">رجوع</a>
+    <div class="clr" style="height: 20px;"></div>
+    <div class="wrapper_table">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th style="width: 50%;">إسم الجهة</th>
+            <th style="width: 50%;">العمليات</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let ministry of ministries">
+            <td>{{ ministry.text }}</td>
+            <td style="white-space: nowrap;">
+              <a
+                routerLink="edit/{{ ministry.value }}"
+                class="btn btn-sm btn-primary mr-1"
+                >النماذج الفنية</a
+              >
+            </td>
+          </tr>
+          <tr *ngIf="!ministries">
+            <td colspan="4" class="text-center">
+              <span
+                class="spinner-border spinner-border-lg align-center"
+              ></span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </form>
+</div>

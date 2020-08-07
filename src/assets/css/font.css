@@ -1,0 +1,70 @@
+/*----- Icon Moon -----*/
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../Fonts/icomoon.eot?14av83');
+  src:  url('../Fonts/icomoon.eot?14av83#iefix') format('embedded-opentype'),
+    url('../Fonts/icomoon.ttf?14av83') format('truetype'),
+    url('../Fonts/icomoon.woff?14av83') format('woff'),
+    url('../Fonts/icomoon.svg?14av83#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-account:before {
+  content: "\e900";
+}
+.icon-customer-support:before {
+  content: "\e901";
+}
+.icon-debt:before {
+  content: "\e902";
+}
+.icon-process:before {
+  content: "\e903";
+}
+.icon-resume:before {
+  content: "\e904";
+}
+.icon-work:before {
+  content: "\e905";
+}
+
+@font-face {
+    font-family: 'GE SS Text';
+    src: url('../Fonts/GESSTextMedium-Medium.woff2') format('woff2'),
+        url('../Fonts/GESSTextMedium-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GE SS Text';
+    src: url('../Fonts/GESSTextUltraLight-UltraLight.woff2') format('woff2'),
+        url('../Fonts/GESSTextUltraLight-UltraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GE SS Text';
+    src: url('../Fonts/GESSTextBold-Bold.woff2') format('woff2'),
+        url('../Fonts/GESSTextBold-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}

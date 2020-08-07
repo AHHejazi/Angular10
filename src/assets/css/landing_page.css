@@ -1,0 +1,115 @@
+
+.bg_landing{
+    background: url(../images/bg_wrapper_landing.png) #f7f7f7;
+    background-repeat: repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 50px;
+}
+.landing_page{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.wrapper_landing{
+    background: #f8f9fa!important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    border-radius: 5px;
+    display: flex;
+    width: 100%;
+    margin: 50px 0;
+}
+.logo_contnet{
+    background: url(../images/bg_logo.png) no-repeat;
+    background-size: cover;
+    flex: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+.logo_contnet::after{
+    content: '';
+    background: rgba(0,138, 118, 0.60);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.logo_contnet a{
+    width: 70%;
+}
+.logo_contnet a img{
+    width: 100%;
+}
+.landing_content{
+    background: url(../images/bg_content.png) no-repeat;
+    background-size: cover;
+    flex: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:70px;
+    text-align: center;
+    flex-direction: column;
+    border-right: 10px solid #b3a48c;
+}
+.landing_content .icon{
+    margin-bottom: 55px;
+}
+.landing_content article{
+    margin-bottom: 50px;
+}
+.landing_content article h2{
+    color:#008a76;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+.landing_content article p{
+    color: #76787b;
+    font-size: 18px;
+}
+.landing_content .btn{
+    min-width: 200px;
+}
+.footer_landing{
+    background: #008a76; 
+    padding: 15px 75px;
+    border-top: 10px solid #b3a48c;
+    margin-top: 50px;
+}
+.footer_landing .copy_Right{
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin-bottom: 0;
+}
+@media screen and (max-width: 800px) {
+    .wrapper_landing{
+        flex-direction: column;
+    }
+    .logo_contnet{
+        padding: 60px;
+    }
+    .logo_contnet a {
+        width: 200px;
+    }
+    .landing_content{
+        border-right: 0;
+        border-top: 10px solid #b3a48c;
+    }
+    .bg_landing{
+        height: 100%;
+    }
+}
+@media screen and (max-height: 600px){
+    .bg_landing{
+        height: 100%;
+    }
+}
